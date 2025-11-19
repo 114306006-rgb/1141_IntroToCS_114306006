@@ -1,0 +1,170 @@
+body{
+background-color:#bdbbbb;
+}
+.main-container{
+width:1000px;
+display:flex ;
+border-radius:30px ;
+background-color: #f7f8fc;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+ margin: 50px auto;   
+ overflow: hidden;
+}
+.left-panel{
+flex:3;
+background-color: #4887c2;
+padding: 0px;
+  overflow: hidden;
+   position: relative;
+}
+.photo-panel{padding: 0;
+}
+
+    .left-panel .panel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 填滿容器並保持比例 */
+    display: block; 
+}
+
+.text-panel h2,p,h4{
+color: white;
+}
+.text-panel h2{
+ margin-top: -4px;
+}
+.text-panel p {
+    margin-top: -12px;
+}
+
+.text-panel h4 {
+    margin-bottom: 0;   /* h4 和下面之間不要空隙 */
+}
+
+.text-panel hr {
+    margin-top: 2px;    /* 調整成你喜歡的距離，越小越貼近 */
+    margin-bottom: 20px; /* 與下方文字的距離 */
+}
+.right-panel{
+flex:7;
+ padding: 20px;
+
+}
+.photo-panel{
+	flex:2;
+
+}
+.text-panel{
+flex:3;
+padding: 20px;
+
+}
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    
+}
+.year {
+    font-weight: bold;
+    width: 150px;
+}
+
+.description {
+    flex: 1;
+    padding-left: 15px;
+}
+.tag{
+ display: inline-block;         
+    padding: 8px 8px ;           
+    margin: 5px 5px;                    
+    background-color: #e3f2fd;      
+    color: #0d47a1;                 
+    border-radius: 12px;            
+    font-size: 15px;
+   
+}
+.column-container{
+display: flex;
+gap: 30px;
+padding: 10px 10px 10px 10px;
+
+}
+.year{
+color:  #000079;
+}
+.hw-column{
+flex: 1;
+background-color: #e6e6e6;
+border-radius: 12px; 
+padding:  0;
+
+}
+.lab-column{
+flex: 1;
+background-color: #e6e6e6;
+border-radius: 12px; 
+padding: 0;
+
+}
+.hw-column h3{
+
+border-bottom: none; 
+    padding-bottom: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+        padding:  10px 20px;
+
+}
+.lab-column h3 {
+font-weight: bold;
+
+    padding-bottom: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding:  10px 20px;
+}
+.hw-column a {
+text-decoration: none;
+}
+.lab-column a {
+text-decoration: none;
+}
+.hw-column ul,.lab-column ul  {
+   
+    margin: 0;
+    list-style-position: inside;
+    padding: 0 20px 10px 20px;
+}
+.music-row{
+display: flex;
+    justify-content: center;  /* 平均分配間距 */
+    gap: 120px;
+    margin-top: 15px;
+    text-align: center;
+}
+.music-item{
+
+text-align: center;
+text-decoration: none;    /* 取消底線 */
+    color:#bab8b8 ;
+}
+.music-note{
+padding-left: 20px;
+ color:#bab8b8;
+}
+
+.right-panel hr{
+    border: none;
+    border-bottom: 3px solid #000; /* 想更粗可以改 4px 或 5px */
+    margin: 8px 0;
+    margin-top: 5px;        /* 緊貼上方 */
+    margin-bottom: 12px;  
+}
+.song-title{color:#bab8b8;
+}
+.section-title {
+    margin-bottom: 0;       /* h2 與 hr 緊靠 */
+    padding-bottom: 0;      /* 不要讓底線推開 */
+}
