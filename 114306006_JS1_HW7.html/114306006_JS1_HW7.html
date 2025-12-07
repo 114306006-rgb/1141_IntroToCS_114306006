@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>114306006_HW7_1A2B</h1>
+	<input type="text" id="guessInput" maxlength="4" placeholder="Enter 4 unique numbers">
+<button onclick="play()">Guess!</button>
+
+<div id="record"></div>
+<script>
+var answer = generateAnswer();
+var attempts=0;
+
+function generateAnswer(){
+var digits = [0,1,2,3,4,5,6,7,8,9];
+var result = [];
+for(var i = 0; i<4;i++){
+var idx = Math.floor(Math.random()*digits.length);
+result.push(digits[idx]);
+digits.splice(idx,1);
+}
+return result.join('');
+}
+
+function isValid(str){
+if(str.length!==4){
+alert("Input must be exactly 4 digits.");
+return false;
+}
+if (!/^\d{4}$/.test(str)) {
+            alert("Input must be digits only.");
+            return false;
+        }
+        var set = new Set(str);
+ if(set.size!==4){
+alert("Digits must not be repeated.");
+return false;
+ }       
+ return true;
+}
+
+function checkAB(guess,ans){
+var A=0,B=0;
+for(var i=0;i<4;i++){
+if(guess[i]==ans[i]){
+A++;
+}else if (ans.includes(guess[i])){
+B++;
+}
+}
+return A+"A"+B+"B";
+}
+
+function play(){
+var inputField = document.getElementById("guessInput");
+        var userGuess = inputField.value.trim();
+
+        if(!isValid(userGuess)){
+return;
+        }
+attempts++;
+var result=checkAB(userGuess,answer);
+var recordDiv = document.getElementById("record");
+        var p = document.createElement("p");
+        p.textContent="第"+attempts+"次:"+userGuess+" → "+result;
+         recordDiv.appendChild(p);
+
+
+
+if (result=="4A0B"){
+alert("Congratulations! You guessed correctly in " + attempts + " attempts.")
+}
+  inputField.value = "";
+        inputField.focus();
+    }
+
+</script>
+</body>
+</html>
